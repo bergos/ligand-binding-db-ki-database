@@ -1,7 +1,7 @@
 {
   "name": "ligand-binding-db-ki-database",
   "version": "0.1.0",
-  "description": "",
+  "description": "Downloads and converts the PDSB Ki database to ChEMBL triples",
   "main": "index.js",
   "bin": {
     "ki-database": "bin/ki-database.js",
