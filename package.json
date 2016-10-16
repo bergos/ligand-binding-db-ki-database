@@ -1,0 +1,39 @@
+{
+  "name": "ligand-binding-db-ki-database",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ki-database": "bin/ki-database.js",
+    "ki-database-to-chembl": "bin/ki-database-to-chembl.js"
+  },
+  "scripts": {
+    "install": "node install.js && node bin/ki-database-to-chembl.js --base http://localhost:3030/ki-database/ tmp/ki-database.csv > tmp/ki-database.nt",
+    "lint": "standard",
+    "start": "node bin/ki-database.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bergos/ligand-binding-db-ki-database.git"
+  },
+  "keywords": [],
+  "author": "Thomas Bergwinkl <bergi@axolotlfarm.org> (https://www.bergnet.org/people/bergi/card#me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bergos/ligand-binding-db-ki-database/issues"
+  },
+  "homepage": "https://github.com/bergos/ligand-binding-db-ki-database",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "csv-parser": "^1.11.0",
+    "fuseki": "^1.0.0",
+    "ligand-binding-utils": "git://github.com/bergos/ligand-binding-utils.git#master",
+    "openbabel-cli": "^1.0.0",
+    "rdf-ext": "^0.3.0",
+    "shelljs": "^0.7.4"
+  },
+  "devDependencies": {
+    "standard": "^8.4.0"
+  }
+}
